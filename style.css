@@ -1,0 +1,14 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+      body { background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+      .mobile-frame { width: 390px; height: 844px; background: #09090b; border-radius: 44px; border: 12px solid #27272a; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+      .status-bar { height: 44px; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: bold; position: absolute; width:100%; z-index:10; }
+      .content { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; }
+      h1 { font-size: 36px; font-weight: 900; }
+      p { color: #a1a1aa; margin-top: 8px; margin-bottom: 60px; }
+      #scan-btn { width: 240px; height: 240px; border-radius: 120px; border: none; background: #27272a; color: white; font-size: 20px; font-weight: 900; position: relative; cursor: pointer; z-index: 5; transition: all 0.3s; }
+      #scan-btn.active { background: #3b82f6; box-shadow: 0 0 50px rgba(59,130,246,0.5); }
+      #scan-btn span { position: relative; z-index: 10; }
+      .ripple { position: absolute; inset: 0; border-radius: 50%; border: 2px solid #3b82f6; opacity: 0; z-index: 1; }
+      #scan-btn.active .ripple { animation: pulse 2s infinite; }
+      @keyframes pulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+      .log { margin-top: 60px; font-family: monospace; color: #3b82f6; font-size: 16px; background: rgba(59,130,246,0.1); padding: 12px 24px; border-radius: 12px; }
